@@ -314,7 +314,13 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
                     </div>
                     <div>
                       <div style={{ fontSize: "11px", color: "#444", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 4 }}>{item.label}</div>
-                      <div style={{ fontSize: "16px", color: "#ccc", fontWeight: 500 }}>{item.value}</div>
+                      {item.label === "Телефон" ? (
+                        <a href="tel:+79157783363" style={{ fontSize: "16px", color: "#f97316", fontWeight: 500, textDecoration: "none" }}>{item.value}</a>
+                      ) : item.label === "Email" ? (
+                        <a href="mailto:sprint-autoservise@list.ru" style={{ fontSize: "16px", color: "#ccc", fontWeight: 500, textDecoration: "none" }}>{item.value}</a>
+                      ) : (
+                        <div style={{ fontSize: "16px", color: "#ccc", fontWeight: 500 }}>{item.value}</div>
+                      )}
                     </div>
                   </div>
                 ))}
