@@ -6,9 +6,9 @@ const SERVICES = [
   { icon: "Car", title: "Шиномонтаж легковых", desc: "Замена, балансировка, ремонт колёс для легковых автомобилей любых марок", price: "от 300 ₽", time: "30 мин", tag: "Легковые" },
   { icon: "Truck", title: "Шиномонтаж грузовых", desc: "Полный цикл работ с шинами грузовых авто, автобусов и спецтехники", price: "от 800 ₽", time: "60 мин", tag: "Грузовые" },
   { icon: "RotateCcw", title: "Балансировка колёс", desc: "Компьютерная балансировка на современном станке 3D-технологии", price: "от 200 ₽", time: "20 мин", tag: "Точность" },
-  { icon: "Wrench", title: "Ремонт шин", desc: "Заплатки, жгуты, вулканизация — восстановим любое повреждение", price: "от 150 ₽", time: "15 мин", tag: "Ремонт" },
+  { icon: "Wrench", title: "Ремонт шин", desc: "Заплатки, жгуты, вулканизация", price: "от 150 ₽", time: "15 мин", tag: "Ремонт" },
   { icon: "Package", title: "Хранение шин", desc: "Сезонное хранение колёс в чистом, охраняемом складе с маркировкой", price: "от 1500 ₽/сезон", time: "—", tag: "Хранение" },
-  { icon: "Zap", title: "Подкачка и азот", desc: "Накачка азотом для стабильного давления и защиты дисков от коррозии", price: "от 100 ₽", time: "10 мин", tag: "Быстро" },
+  { icon: "Zap", title: "Подкачка", desc: "Накачка шин для стабильного давления", price: "от 100 ₽", time: "10 мин", tag: "Быстро" },
 ];
 
 const GALLERY_ITEMS = [
@@ -73,7 +73,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
           </p>
 
           <div className="animate-fade-in-up delay-300" style={{ display: "flex", gap: 48, marginBottom: 48, flexWrap: "wrap", opacity: 0 }}>
-            {[["10+", "лет опыта"], ["5000+", "клиентов"], ["24/7", "автостоянка"], ["100%", "гарантия"]].map(([num, label]) => (
+            {[["35+", "лет опыта"], ["5000+", "клиентов"], ["24/7", "автостоянка"]].map(([num, label]) => (
               <div key={label}>
                 <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "36px", fontWeight: 700, color: "#f97316", lineHeight: 1 }}>{num}</div>
                 <div style={{ fontSize: "12px", color: "#555", textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4 }}>{label}</div>
