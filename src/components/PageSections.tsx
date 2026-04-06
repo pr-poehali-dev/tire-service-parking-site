@@ -207,29 +207,34 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gridTemplateRows: "300px 300px", gap: "3px" }}>
-            <div style={{ gridRow: "span 2", position: "relative", overflow: "hidden" }}>
-              <img
-                src={HERO_IMAGE}
-                alt="Шиномонтаж"
-                style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.65, transition: "all 0.5s" }}
-                onMouseOver={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
-                onMouseOut={e => { (e.currentTarget as HTMLElement).style.opacity = "0.65"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
-              />
-              <div style={{ position: "absolute", bottom: 20, left: 20 }}>
-                <div style={{ background: "#f97316", color: "#111", fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 12px" }}>Основной зал</div>
-              </div>
-            </div>
-            {GALLERY_ITEMS.map((item, i) => (
-              <div key={i} style={{ background: "#181818", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #1e1e1e", overflow: "hidden", cursor: "pointer", transition: "background 0.3s" }}
-                onMouseOver={e => (e.currentTarget.style.background = "#1f1f1f")}
-                onMouseOut={e => (e.currentTarget.style.background = "#181818")}
-              >
-                <div style={{ textAlign: "center" }}>
-                  <Icon name={item.icon} size={44} style={{ color: "#2d2d2d" }} />
-                  <div style={{ marginTop: 12, fontSize: "11px", color: "#3a3a3a", textTransform: "uppercase", letterSpacing: "0.12em" }}>{item.label}</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "400px 400px", gap: "3px" }}>
+            {[
+              { src: "https://cdn.poehali.dev/projects/d61b9fc4-90aa-438f-abfa-9fc27ecfd134/bucket/6b14eee0-d597-4927-aa09-b87a785415f6.jpg", label: "Вход" },
+              { src: "https://cdn.poehali.dev/projects/d61b9fc4-90aa-438f-abfa-9fc27ecfd134/bucket/e5b739dc-d628-4cb1-93e5-18d4c43d62d9.jpg", label: "Территория" },
+              { src: HERO_IMAGE, label: "Основной зал" },
+              { src: "", label: "" },
+            ].map((item, i) => (
+              item.src ? (
+                <div key={i} style={{ position: "relative", overflow: "hidden" }}>
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.75, transition: "all 0.5s" }}
+                    onMouseOver={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
+                    onMouseOut={e => { (e.currentTarget as HTMLElement).style.opacity = "0.75"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+                  />
+                  <div style={{ position: "absolute", bottom: 16, left: 16 }}>
+                    <div style={{ background: "#f97316", color: "#111", fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 12px" }}>{item.label}</div>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div key={i} style={{ background: "#181818", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #1e1e1e" }}>
+                  <div style={{ textAlign: "center" }}>
+                    <Icon name="Image" size={44} style={{ color: "#2d2d2d" }} />
+                    <div style={{ marginTop: 12, fontSize: "11px", color: "#3a3a3a", textTransform: "uppercase", letterSpacing: "0.12em" }}>Скоро</div>
+                  </div>
+                </div>
+              )
             ))}
           </div>
         </div>
