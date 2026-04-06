@@ -327,13 +327,16 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
                 <Icon name="MapPin" size={48} style={{ color: "#f97316", marginBottom: 16 }} />
                 <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "20px", color: "#fff", letterSpacing: "0.05em", textTransform: "uppercase" }}>ул. Шоссейная, дом 12</div>
                 <div style={{ fontSize: "13px", color: "#444", marginTop: 8 }}>дер. Леоново</div>
-                <button
-                  style={{ marginTop: 24, background: "transparent", color: "#f97316", fontWeight: 600, fontSize: "13px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "12px 28px", border: "1px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", transition: "all 0.2s" }}
+                <a
+                  href="https://yandex.ru/maps/-/CPfgB0~Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "inline-block", marginTop: 24, background: "transparent", color: "#f97316", fontWeight: 600, fontSize: "13px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "12px 28px", border: "1px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", transition: "all 0.2s", textDecoration: "none" }}
                   onMouseOver={e => { e.currentTarget.style.background = "#f97316"; e.currentTarget.style.color = "#111"; }}
                   onMouseOut={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#f97316"; }}
                 >
                   Открыть карту
-                </button>
+                </a>
               </div>
             </div>
           </div>
