@@ -212,7 +212,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
               { src: "https://cdn.poehali.dev/projects/d61b9fc4-90aa-438f-abfa-9fc27ecfd134/bucket/6b14eee0-d597-4927-aa09-b87a785415f6.jpg", label: "Вход" },
               { src: "https://cdn.poehali.dev/projects/d61b9fc4-90aa-438f-abfa-9fc27ecfd134/bucket/e5b739dc-d628-4cb1-93e5-18d4c43d62d9.jpg", label: "Территория" },
               { src: HERO_IMAGE, label: "Основной зал" },
-              { src: "", label: "" },
+              { src: "https://cdn.poehali.dev/projects/d61b9fc4-90aa-438f-abfa-9fc27ecfd134/bucket/090b1c0f-f324-494c-99b9-c6714e1fb453.jpeg", label: "Въезд" },
             ].map((item, i) => (
               item.src ? (
                 <div key={i} style={{ position: "relative", overflow: "hidden" }}>
