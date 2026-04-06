@@ -82,15 +82,6 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
           </div>
 
           <div className="animate-fade-in-up delay-400" style={{ display: "flex", gap: 16, flexWrap: "wrap", opacity: 0 }}>
-            <button
-              onClick={onBookingOpen}
-              style={{ background: "#f97316", color: "#111", fontWeight: 700, fontSize: "15px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "18px 40px", border: "none", cursor: "pointer", fontFamily: "'Oswald', sans-serif", display: "flex", alignItems: "center", gap: 10, transition: "all 0.2s" }}
-              onMouseOver={e => { e.currentTarget.style.background = "#ea6c0a"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseOut={e => { e.currentTarget.style.background = "#f97316"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >
-              <Icon name="CalendarCheck" size={18} style={{ color: "#111" }} />
-              Записаться онлайн
-            </button>
             <a
               href="#services"
               style={{ background: "transparent", color: "#ddd", fontWeight: 600, fontSize: "15px", letterSpacing: "0.05em", textTransform: "uppercase", padding: "18px 40px", border: "1px solid #444", cursor: "pointer", fontFamily: "'Oswald', sans-serif", textDecoration: "none", display: "flex", alignItems: "center", gap: 10, transition: "all 0.2s" }}
@@ -134,30 +125,12 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
                   <Icon name={svc.icon} size={24} style={{ color: "#f97316" }} />
                 </div>
                 <h3 style={{ fontFamily: "'Oswald', sans-serif", fontSize: "22px", fontWeight: 600, color: "#fff", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.03em" }}>{svc.title}</h3>
-                <p style={{ fontSize: "14px", color: "#666", lineHeight: 1.7, marginBottom: 28 }}>{svc.desc}</p>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #2a2a2a", paddingTop: 20 }}>
-                  <div style={{ fontSize: "20px", fontWeight: 700, color: "#f97316", fontFamily: "'Oswald', sans-serif" }}>{svc.price}</div>
-                  {svc.time !== "—" && (
-                    <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#555", fontSize: "13px" }}>
-                      <Icon name="Clock" size={14} style={{ color: "#555" }} />
-                      {svc.time}
-                    </div>
-                  )}
-                </div>
+                <p style={{ fontSize: "14px", color: "#666", lineHeight: 1.7 }}>{svc.desc}</p>
               </div>
             ))}
           </div>
 
-          <div style={{ textAlign: "center", marginTop: 48 }}>
-            <button
-              onClick={onBookingOpen}
-              style={{ background: "transparent", color: "#f97316", fontWeight: 700, fontSize: "14px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 40px", border: "2px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", transition: "all 0.2s" }}
-              onMouseOver={e => { e.currentTarget.style.background = "#f97316"; e.currentTarget.style.color = "#111"; }}
-              onMouseOut={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#f97316"; }}
-            >
-              Записаться на любую услугу
-            </button>
-          </div>
+
         </div>
       </section>
 
