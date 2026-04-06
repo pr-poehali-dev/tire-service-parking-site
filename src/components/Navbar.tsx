@@ -29,8 +29,8 @@ export default function Navbar({ activeNav, onBookingOpen }: NavbarProps) {
               <span>⚙ Легковой шиномонтаж</span>
               <span>⚙ Балансировка колёс</span>
               <span>⚙ Автостоянка 24/7</span>
-              <span>⚙ Хранение шин</span>
-              <span>⚙ Онлайн-запись</span>
+              <span>⚙ Ремонт шин</span>
+              <span>⚙ Подкачка и азот</span>
             </span>
           ))}
         </div>

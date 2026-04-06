@@ -60,7 +60,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1280, margin: "0 auto", padding: "80px 24px" }}>
           <div className="animate-fade-in-left" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.35)", padding: "6px 16px", marginBottom: 24 }}>
             <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#22c55e" }} className="animate-pulse-orange" />
-            <span style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#f97316", fontWeight: 600 }}>Работаем ежедневно 08:00 – 22:00</span>
+            <span style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#f97316", fontWeight: 600 }}>Работаем круглосуточно, без выходных</span>
           </div>
 
           <h1 className="animate-fade-in-up" style={{ fontFamily: "'Oswald', sans-serif", fontSize: "clamp(48px, 8vw, 96px)", fontWeight: 700, lineHeight: 1, color: "#fff", textTransform: "uppercase", letterSpacing: "0.02em", maxWidth: 800, marginBottom: 24 }}>
@@ -294,7 +294,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "start" }}>
             <div>
-              <div style={{ marginBottom: 48 }}>
+              <div>
                 {[
                   { icon: "MapPin", label: "Адрес", value: "ул. Промышленная, 42, Москва" },
                   { icon: "Phone", label: "Телефон", value: "+7 (495) 123-45-67" },
@@ -312,16 +312,6 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
                   </div>
                 ))}
               </div>
-
-              <button
-                onClick={onBookingOpen}
-                style={{ width: "100%", background: "#f97316", color: "#111", fontWeight: 700, fontSize: "15px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "20px", border: "none", cursor: "pointer", fontFamily: "'Oswald', sans-serif", transition: "background 0.2s", display: "flex", alignItems: "center", justifyContent: "center", gap: 12 }}
-                onMouseOver={e => (e.currentTarget.style.background = "#ea6c0a")}
-                onMouseOut={e => (e.currentTarget.style.background = "#f97316")}
-              >
-                <Icon name="CalendarCheck" size={20} style={{ color: "#111" }} />
-                Записаться на шиномонтаж
-              </button>
             </div>
 
             <div style={{ background: "#181818", height: 420, border: "1px solid #2a2a2a", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
