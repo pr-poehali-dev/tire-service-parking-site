@@ -160,14 +160,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
                 ))}
               </div>
 
-              <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
-                {[["Легковые", "от 100 ₽/ч"], ["Грузовые", "от 200 ₽/ч"], ["Месяц", "от 3500 ₽"]].map(([type, price]) => (
-                  <div key={type}>
-                    <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "24px", fontWeight: 700, color: "#f97316" }}>{price}</div>
-                    <div style={{ fontSize: "12px", color: "#555", textTransform: "uppercase", letterSpacing: "0.1em" }}>{type}</div>
-                  </div>
-                ))}
-              </div>
+
             </div>
 
             {/* Parking visual */}
@@ -278,6 +271,20 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
               </div>
             ))}
           </div>
+
+          <div style={{ textAlign: "center", marginTop: 48 }}>
+            <a
+              href="https://yandex.ru/maps"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "transparent", color: "#f97316", fontWeight: 700, fontSize: "14px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 40px", border: "2px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", textDecoration: "none", transition: "all 0.2s" }}
+              onMouseOver={e => { e.currentTarget.style.background = "#f97316"; e.currentTarget.style.color = "#111"; }}
+              onMouseOut={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#f97316"; }}
+            >
+              <Icon name="MessageSquarePlus" size={18} style={{ color: "inherit" }} />
+              Оставить отзыв
+            </a>
+          </div>
         </div>
       </section>
 
@@ -296,10 +303,10 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
             <div>
               <div>
                 {[
-                  { icon: "MapPin", label: "Адрес", value: "ул. Промышленная, 42, Москва" },
-                  { icon: "Phone", label: "Телефон", value: "+7 (495) 123-45-67" },
-                  { icon: "Clock", label: "Режим работы", value: "Ежедневно 08:00 – 22:00" },
-                  { icon: "Mail", label: "Email", value: "info@shinmaster.ru" },
+                  { icon: "MapPin", label: "Адрес", value: "дер. Леоново, ул. Шоссейная, дом 12" },
+                  { icon: "Phone", label: "Телефон", value: "8 (915) 778-33-63" },
+                  { icon: "Clock", label: "Режим работы", value: "Круглосуточно" },
+                  { icon: "Mail", label: "Email", value: "sprint-autoservise@list.ru" },
                 ].map((item) => (
                   <div key={item.label} style={{ display: "flex", gap: 20, padding: "24px 0", borderBottom: "1px solid #1e1e1e", alignItems: "center" }}>
                     <div style={{ width: 48, height: 48, background: "rgba(249,115,22,0.08)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
@@ -318,8 +325,8 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
               <div className="hex-bg" style={{ position: "absolute", inset: 0 }} />
               <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
                 <Icon name="MapPin" size={48} style={{ color: "#f97316", marginBottom: 16 }} />
-                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "20px", color: "#fff", letterSpacing: "0.05em", textTransform: "uppercase" }}>ул. Промышленная, 42</div>
-                <div style={{ fontSize: "13px", color: "#444", marginTop: 8 }}>Москва, Промышленный район</div>
+                <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "20px", color: "#fff", letterSpacing: "0.05em", textTransform: "uppercase" }}>ул. Шоссейная, дом 12</div>
+                <div style={{ fontSize: "13px", color: "#444", marginTop: 8 }}>дер. Леоново</div>
                 <button
                   style={{ marginTop: 24, background: "transparent", color: "#f97316", fontWeight: 600, fontSize: "13px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "12px 28px", border: "1px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", transition: "all 0.2s" }}
                   onMouseOver={e => { e.currentTarget.style.background = "#f97316"; e.currentTarget.style.color = "#111"; }}
@@ -340,9 +347,9 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
             <div style={{ width: 36, height: 36, borderRadius: "50%", background: "#f97316", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Icon name="Settings" size={18} style={{ color: "#111" }} />
             </div>
-            <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "18px", fontWeight: 700, color: "#fff" }}>ШИН<span style={{ color: "#f97316" }}>МАСТЕР</span></div>
+            <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "18px", fontWeight: 700, color: "#fff" }}>СПР<span style={{ color: "#f97316" }}>ИНТ</span></div>
           </div>
-          <div style={{ fontSize: "13px", color: "#333" }}>© 2026 ШинМастер. Все права защищены.</div>
+          <div style={{ fontSize: "13px", color: "#333" }}>© 2026 Спринт. Все права защищены.</div>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {NAV_ITEMS.map((item) => (
               <a

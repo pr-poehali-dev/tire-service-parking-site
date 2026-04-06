@@ -44,7 +44,7 @@ export default function Navbar({ activeNav, onBookingOpen }: NavbarProps) {
               <Icon name="Settings" size={20} style={{ color: "#111" }} />
             </div>
             <div>
-              <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "20px", fontWeight: 700, color: "#fff", letterSpacing: "0.05em" }}>ШИН<span style={{ color: "#f97316" }}>МАСТЕР</span></div>
+              <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: "20px", fontWeight: 700, color: "#fff", letterSpacing: "0.05em" }}>СПР<span style={{ color: "#f97316" }}>ИНТ</span></div>
               <div style={{ fontSize: "10px", color: "#666", letterSpacing: "0.15em", textTransform: "uppercase", lineHeight: 1 }}>Шиномонтаж & Стоянка</div>
             </div>
           </a>
@@ -72,13 +72,6 @@ export default function Navbar({ activeNav, onBookingOpen }: NavbarProps) {
           </div>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            <button
-              onClick={onBookingOpen}
-              className="hidden md:block"
-              style={{ background: "#f97316", color: "#111", fontWeight: 700, fontSize: "13px", letterSpacing: "0.08em", textTransform: "uppercase", padding: "10px 20px", border: "none", cursor: "pointer", fontFamily: "'Oswald', sans-serif" }}
-            >
-              Записаться
-            </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden"
