@@ -274,7 +274,7 @@ export default function PageSections({ onBookingOpen }: PageSectionsProps) {
 
           <div style={{ textAlign: "center", marginTop: 48 }}>
             <a
-              href="https://yandex.ru/maps"
+              href="https://yandex.ru/maps/-/CPfgB0~Q"
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "transparent", color: "#f97316", fontWeight: 700, fontSize: "14px", letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 40px", border: "2px solid #f97316", cursor: "pointer", fontFamily: "'Oswald', sans-serif", textDecoration: "none", transition: "all 0.2s" }}
